@@ -1,0 +1,59 @@
+User={
+
+​		"code" : "0",
+
+​		"ms" : "用户信息显示成功",
+
+​		"result" : [
+
+​				{
+
+​						"User-id" : "010013",
+
+​						"user-name" : "张三",
+
+​						"user-address" : "10001",
+
+​						"user-sex"： "男",
+
+            "user-score"： "85",
+
+            "user-course"： "软件工程",
+
+​						"user-tel" : "!73-8526-9856",,
+
+​						"user-order from" : [
+
+​													{
+
+​															"order-id" : "557561256223",
+
+​															"order-create time" : "2018-03-16",
+
+​															"order-Status" : "已学习",
+
+​															"order-Issue" : [
+
+​																				{
+
+​																					"Issue-type" : "成绩错误",
+
+​																					"Issue-Statue" : "待补考......",
+
+​																					"Issue-description" : "考试成绩上传错误",
+
+​																	}
+
+​															]
+
+​													
+
+​								}	
+
+​						]
+
+​				}
+
+​		]
+
+}

@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/student")
-public class StudentApiController implements StudentApi{
+public class StudentController implements StudentApi{
 
     @Autowired
     private IScoreService scoreService;
@@ -24,7 +24,7 @@ public class StudentApiController implements StudentApi{
 
     @Override
     public ResponseEntity<List<ScoreDetails>> getStudentScores(@Valid String studentId, @Valid String year, @Valid String term) {
-        List<ScoreDetails> scores = scoreService.getScores(studentId, year, term);
+        List<ScoreDetails> scores = scoreService.getScoresByStudentId(studentId, year, term);
 
         // 判断成绩是否存在
         if (scores != null) {

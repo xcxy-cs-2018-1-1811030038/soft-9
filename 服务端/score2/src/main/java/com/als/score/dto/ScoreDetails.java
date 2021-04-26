@@ -1,14 +1,18 @@
 package com.als.score.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
-@Schema(description = "成绩信息")
+@Schema(description = "成绩信息", title = "Score")
 @Data
-public class Score {
+@NoArgsConstructor
+@AllArgsConstructor
+public class ScoreDetails {
     @Schema(description = "学号")
     private String studentId;
     @Schema(description = "学生姓名")
@@ -25,8 +29,8 @@ public class Score {
     private String year;
     @Schema(description = "学期")
     private String term;
-    @Min(0)
+    @Min(-1)
     @Max(100)
-    @Schema(description = "成绩")
+    @Schema(description = "成绩，-1代表未输入成绩")
     private Integer score;
 }

@@ -1,0 +1,40 @@
+server:
+  port: 8800
+  servlet:
+    context-path: /
+
+
+spring:
+  application:
+    name: score
+  datasource:
+    username: root
+    password: als274213
+    url: jdbc:mysql://121.4.40.144:3306/scores?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  # mapper-locations: ["classpath:/mapper/**/*.xml"]   # 配置.xml文件位置
+  type-aliases-package: com.als.score.entity    # 配置别名，即在xml文件中可以不写全类名（可以不写包名）
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  packages-to-scan: com.als.score.api
+  paths-to-match: /login/**, /student/**, /teacher/**, /manager/**
+
+
+
+logging:
+  level:
+    com.als.score.api: debug
+    web: debug
+jwt:
+  # jwt储存的请求头
+  tokenHeader: Authorization
+  # jwt加密使用的秘钥
+  secret: scores_secret
+  # jwt的失效（超期）时间(60*60*24)
+  expire: 604800
+  # jwt负载中拿到开头
+  tokenHead: Bearer

@@ -37,7 +37,7 @@ public class UserDetailsService {
             if(teacher != null) {
                 user.setUsername(teacher.getTeacherName());
                 user.setPassword(teacher.getPassword());
-                user.setAuthorities(AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_STUDENT"));
+                user.setAuthorities(AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_TEACHER"));
             } else {
                 return null;
             }

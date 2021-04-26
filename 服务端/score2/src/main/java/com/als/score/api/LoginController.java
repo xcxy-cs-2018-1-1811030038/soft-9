@@ -14,7 +14,7 @@ import java.util.Map;
 @Slf4j
 @RestController
 @RequestMapping("/login")
-public class LoginApiController implements LoginApi{
+public class LoginController implements LoginApi{
 
     @Autowired
     private LoginService loginService;
